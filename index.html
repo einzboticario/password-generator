@@ -9,9 +9,43 @@
 </head>
 <body>
     <div class="container">
-        
+
+        <!-- title -->
+        <h2>Password Generator</h2>
+        <p>Generate 8 to 16 random character password</p>
+
+        <!-- password display -->
+        <p id="password_display">[generated password will show here]</p>
+
+        <!-- form -->
+        <form class="form" action="">
+
+            <!-- password conditions -->
+
+            <!-- number of chars -->
+            <label for="char_amt_number">Character Length</label>
+            <div id="char_amt_container">
+                <input type="range" min="8" max="16" value="8" id="char_amt_range">
+                <input type="number" min="8" max="16" value="8" id="char_amt_number">
+            </div>
+
+            <!-- uppercase -->
+            <label for="include_upper">Include uppercase?</label>
+            <input type="checkbox" id="include_upper">
+
+            <!-- numbers -->
+            <label for="include_numbers">Include numbers?</label>
+            <input type="checkbox" id="include_numbers">
+
+            <!-- symbols -->
+            <label for="include_symbols">Include symbols?</label>
+            <input type="checkbox" id="include_symbols">
+
+            <!-- submit button -->
+            <button type="submit" class="btn">Generate</button>
+        </form>
     </div>
-    
+
     <!-- JavaScript -->
     <script src="./app.js"></script>
 </body>
