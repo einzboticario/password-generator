@@ -1,0 +1,28 @@
+body{
+    background-color: #fff;
+    background-image: linear-gradient(to left, #fff 0%, #d7e1ec 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
