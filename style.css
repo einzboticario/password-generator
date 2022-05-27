@@ -1,4 +1,5 @@
 body{
+    font-family:'Courier New', Courier, monospace;
     background-color: #fff;
     background-image: linear-gradient(to left, #fff 0%, #d7e1ec 74%);
     display: flex;
@@ -16,6 +17,22 @@ body{
     border-radius: 1rem;
     flex-direction: column;
     padding: 2rem;
+    transform: scale(120%);
+}
+
+#title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title > *{
+    margin: 0px;
+}
+
+#title > h2{
+    margin-bottom: 5px;
 }
 
 .form{
@@ -25,4 +42,39 @@ body{
     grid-template-columns: auto auto;
     row-gap: 1rem;
     column-gap: 2rem;
+}
+
+#char_amt_container{
+    display: flex;
+    align-items: center;
+}
+
+#char_amt_number{
+    margin-left: 10px;
+    width: 2rem;
+}
+
+#pw_display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    background-color: beige;
+    color: #000;
+    border: 0.3px solid black;
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 330px;
+}
+
+.btn{
+    background-color: #fff;
+    grid-column: span 2;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.btn:hover{
+    background-color: rgb(230, 230, 230);
 }
