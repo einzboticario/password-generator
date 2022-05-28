@@ -31,7 +31,35 @@ form.addEventListener('submit', e => {
 
 //generatePassword function
 function generatePassword(char_amt, upper, numbers, symbols){
-    //~~~~~
+    const lc = 'abdefghijklmnopqrstuvwxyz'
+    const uc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const nums = '0123456789'
+    const symbs = '!@#$%^&*()_+-={}[]:"|;,./<>?`~'
+    const charLength = char_amt
+
+    let password = ''
+    let includedChars = ''.concat(lc)
+
+    //conditionals
+    if (upper === true) {
+        includedChars =  includedChars.concat(uc)
+    }
+
+    if (numbers === true) {
+        includedChars =  includedChars.concat(nums)
+    }
+
+    if (symbols === true) {
+        includedChars =  includedChars.concat(symbs)
+    }
+
+    //looping over includedChars
+    for (let i = 0; i < charLength; i++){
+        password += includedChars[Math.floor(Math.random() * includedChars.length)]
+    }
+
+    //display password
+    pw_display.innerHTML = password
 }
 
 // link char slider value
