@@ -15,9 +15,11 @@
             <h2>Password Generator</h2>
             <p>Generate 8 to 16 character password</p>
         </div>
-
-        <!-- password display -->
-        <p id="pw_display">********</p>
+        
+        <div id="pw-display-container">
+            <span class="success">Text copied to clipboard!</span>
+            <input type="text" id="pw_display" placeholder="********" title="Copy password" readonly></input>
+        </div>
 
         <!-- form -->
         <form class="form" id="pw_generator_form" action="">
