@@ -25,7 +25,7 @@ body{
     align-items: center;
 
     padding: 3rem;
-    width: 50%;
+    width: 60%;
 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -76,7 +76,7 @@ body{
     position: relative;
     margin-top: 2rem;
 
-    width: 25vw;
+    width: 30vw;
 }
 
 .success{
@@ -134,4 +134,40 @@ body{
 .btn:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.8);
+}
+/* media queries */ 
+@media (max-width: 1200px){
+    .container{
+        width: 75%;
+    }
+    #pw-display-container{
+        width: 40vw;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+    #pw-display-container{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 100%;
+        font-size: 0.75rem;
+    }
+    #title h2{
+        font-size: 1.5rem;
+    }
+    #title p{
+        font-size: 0.75rem;
+    }
+    #pw-display-container{
+        width: 70vw;
+    }
+    #pw_display{
+        font-size: 1rem;
+    }
 }
