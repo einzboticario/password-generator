@@ -1,13 +1,11 @@
 // display
 const pw_display = document.getElementById('pw_display');
-
+const success = document.querySelector('.success');
 // one and only form
 const form = document.getElementById('pw_generator_form');
-
 // char slider
 const char_amt_range = document.getElementById('char_amt_range');
 const char_amt_number = document.getElementById('char_amt_number');
-
 // checkboxes
 const include_upper = document.getElementById('include_upper');
 const include_numbers = document.getElementById('include_numbers');
@@ -27,6 +25,17 @@ form.addEventListener('submit', e => {
 
     // call function to generate password
     const password = generatePassword(char_amt, upper, numbers, symbols)
+})
+
+// copy to clipboard
+pw_display.addEventListener('click', async () => {
+    await navigator.clipboard.writeText(pw_display.value);
+
+    // add and remove 'active' class
+    success.classList.add('active');
+    setTimeout(function(){
+        success.classList.remove('active');
+    }, 1000)
 })
 
 //generatePassword function
@@ -59,7 +68,7 @@ function generatePassword(char_amt, upper, numbers, symbols){
     }
 
     //display password
-    pw_display.innerHTML = password
+    pw_display.value = password
 }
 
 // link char slider value
