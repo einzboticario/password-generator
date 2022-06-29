@@ -170,4 +170,9 @@ body{
     #pw_display{
         font-size: 1rem;
     }
+    .cbx{
+        width: 4vw;
+        height: 4vh;
+        color: #000;
+    }
 }
